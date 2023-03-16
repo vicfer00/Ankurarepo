@@ -53,8 +53,7 @@ try:
                 for state, population in state_populations.items():
                     results[state] = results.get(state, 0) + population
 
-        for state, population in sorted(results.items(), key=lambda item: item[
-            0]):  # sorting alphabetically, returns items in an iterable
+        for state, population in sorted(results.items(), key=lambda item: item[0]):  # sorting alphabetically, returns items in an iterable
             print(f'{state}:\t{population}')  # print state and population with tab
 except ftplib.all_errors as e:
     logging.error(f'Failed to connect to FTP server: {e}')

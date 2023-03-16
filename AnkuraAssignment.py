@@ -28,8 +28,7 @@ def read_files(filenames):
                 data = json.loads(line)
                 state = data['state']
                 population = data['population']
-                results[state] = results.get(state,
-                                             0) + population  # add population value to key if key is present. If not present then the get function adds 0 as value by default
+                results[state] = results.get(state, 0) + population  # add population value to key if key is present. If not present then the get function adds 0 as value by default
 
     return results
 
