@@ -42,6 +42,8 @@ try:
 
         state_populations = read_files(ftp_connection.nlst())
 
+        # TODO: remove files after reading them, maybe loop and remove all dat.gz files
+
         for state, population in sorted(state_populations.items(), key=lambda item: item[0]):  # sorting alphabetically, returns items in an iterable
             print(f'{state}:\t{population}')  # print state and population with tab
 except ftplib.all_errors as e:
