@@ -6,6 +6,7 @@ __pycache__/
 .idea/
 
 *.pdf
+*.dat.gz
 
 # C extensions
 *.so
